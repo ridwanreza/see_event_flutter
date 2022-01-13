@@ -92,7 +92,7 @@ class _ProfileState extends State<Profile> {
                   child: ListView(
                     shrinkWrap: true,
                     children: [
-
+                      ElevatedButton(onPressed: () {}, child: Text('edit profile'))
                     ],
                   ),
                 )
