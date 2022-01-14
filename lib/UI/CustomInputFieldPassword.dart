@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class CustomInputField extends StatefulWidget {
+
+class CustomInputFieldPassword extends StatefulWidget {
 
   Icon fieldIcon;
   String hintText;
 
-  CustomInputField(this.fieldIcon, this.hintText);
+  CustomInputFieldPassword(this.fieldIcon, this.hintText);
+
+
 
   @override
-  State<CustomInputField> createState() => _CustomInputFieldState();
+  _CustomInputFieldPasswordState createState() => _CustomInputFieldPasswordState();
 }
 
-class _CustomInputFieldState extends State<CustomInputField> {
+class _CustomInputFieldPasswordState extends State<CustomInputFieldPassword> {
+
+  bool _secureText = true;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,17 +52,28 @@ class _CustomInputFieldState extends State<CustomInputField> {
                     ),
                     fillColor: Colors.white,
                     filled: true,
+                    suffixIcon: IconButton(
+                      icon: FaIcon(_secureText ? FontAwesomeIcons.eyeSlash : FontAwesomeIcons.eye, size: 15, color: Color(0xFF214457),),
+                      onPressed: () {
+                        setState(() {
+                          _secureText = !_secureText;
+                        });
+                      },
+                    )
                   ),
                   style: GoogleFonts.notoSans(
                     fontSize: 15.0,
                     color: Colors.black,
                   ),
+                  obscureText: _secureText,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+

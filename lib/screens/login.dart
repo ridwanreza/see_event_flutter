@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../UI/CustomInputField.dart';
+import '../UI/CustomInputFieldPassword.dart';
 
 
 class Login extends StatefulWidget {
@@ -64,7 +65,7 @@ class _LoginState extends State<Login> {
                   ),
                   Container(
                     margin: EdgeInsets.only(bottom: 50),
-                    child: CustomInputField(
+                    child: CustomInputFieldPassword(
                         Icon(Icons.lock, color: Colors.white), 'Password'),
                   ),
                   Container(

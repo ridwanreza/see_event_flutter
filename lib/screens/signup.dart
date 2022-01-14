@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../UI/CustomInputField.dart';
+import '../UI/CustomInputFieldPassword.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -70,11 +71,11 @@ class _SignUpState extends State<SignUp> {
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 20),
-                  child: CustomInputField(Icon(Icons.lock, color: Colors.white,), 'Password'),
+                  child: CustomInputFieldPassword(Icon(Icons.lock, color: Colors.white,), 'Password'),
                 ),
                 Container(
                   margin: EdgeInsets.only(bottom: 50),
-                  child: CustomInputField(Icon(Icons.lock, color: Colors.white), 'Confirm Password'),
+                  child: CustomInputFieldPassword(Icon(Icons.lock, color: Colors.white), 'Confirm Password'),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.80,

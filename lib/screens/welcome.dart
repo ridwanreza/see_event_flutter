@@ -65,6 +65,7 @@ class _WelcomeState extends State<Welcome> {
                     borderRadius: BorderRadius.circular(10),
                     color: Color(0xFF214457),
                     child: InkWell(
+                      borderRadius: BorderRadius.circular(10),
                       child: Center(
                         child: Text('Sign Up',
                         style: GoogleFonts.notoSans(
@@ -99,6 +100,7 @@ class _WelcomeState extends State<Welcome> {
                   child: Material(
                     borderRadius: BorderRadius.circular(10),
                     child: InkWell(
+                      borderRadius: BorderRadius.circular(10),
                       child: Center(
                         child: Text('Sign In',
                         style: GoogleFonts.notoSans(
