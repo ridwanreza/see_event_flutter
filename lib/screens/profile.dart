@@ -195,7 +195,7 @@ class _ProfileState extends State<Profile> {
                                   ],
                                 ),
                                 onTap: () {
-                                  Navigator.pushNamed(context, '/contact');
+                                  Navigator.pushNamed(context, '/editPassword');
                                 }
                             ),
                           ),

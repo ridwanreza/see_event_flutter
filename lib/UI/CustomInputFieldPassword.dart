@@ -57,7 +57,8 @@ class _CustomInputFieldPasswordState extends State<CustomInputFieldPassword> {
                       onPressed: () {
                         setState(() {
                           _secureText = !_secureText;
-                        });
+                          }
+                        );
                       },
                     )
                   ),

@@ -12,6 +12,7 @@ import 'screens/signup.dart';
 import 'screens/login.dart';
 import 'screens/edit_profile.dart';
 import 'screens/create_event.dart';
+import 'screens/edit_password.dart';
 
 void main() => runApp(MaterialApp(
   home: Welcome(),
@@ -23,6 +24,8 @@ void main() => runApp(MaterialApp(
     '/signup': (context) => SignUp(),
     '/login': (context) => Login(),
     '/bottomNav': (context) => bottomNavigation(),
+    '/profile': (context) => Profile(),
+    '/editPassword': (context) => EditPassword(),
 
   },
 ));
