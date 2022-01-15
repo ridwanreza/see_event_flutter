@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'home.dart';
 import 'package:flutter/material.dart';
 import 'profile.dart';
@@ -39,8 +42,10 @@ class _bottomNavigationState extends State<bottomNavigation> {
 
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        backgroundColor: Colors.orangeAccent,
-        onPressed: () {},
+        backgroundColor: Color(0xFF214457),
+        onPressed: () {
+          Navigator.pushNamed(context, '/createEvent');
+        },
         elevation: 0.0,
       ),
 
@@ -49,7 +54,7 @@ class _bottomNavigationState extends State<bottomNavigation> {
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: Container(
-          height: 50,
+          height: 60,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -66,10 +71,12 @@ class _bottomNavigationState extends State<bottomNavigation> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.home_filled, color: currentTab == 0 ? Colors.blue : Colors.grey,),
+                        FaIcon(FontAwesomeIcons.home, color: currentTab == 0 ? Color(0xFF214457) : Colors.grey,),
                         Text('Home',
-                        style: TextStyle(
-                            color: currentTab == 0 ? Colors.blue : Colors.grey),
+                        style: GoogleFonts.notoSans(
+                            color: currentTab == 0 ? Color(0xFF214457) : Colors.grey,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700),
                         ),
                       ],
                     ),
@@ -85,10 +92,12 @@ class _bottomNavigationState extends State<bottomNavigation> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.person, color: currentTab == 1 ? Colors.blue : Colors.grey,),
-                        Text('More',
-                          style: TextStyle(
-                              color: currentTab == 1 ? Colors.blue : Colors.grey),
+                        FaIcon(FontAwesomeIcons.search, color: currentTab == 1 ? Color(0xFF214457) : Colors.grey,),
+                        Text('Explore',
+                          style: GoogleFonts.notoSans(
+                              color: currentTab == 1 ? Color(0xFF214457) : Colors.grey,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700),
                         ),
                       ],
                     ),
@@ -108,10 +117,15 @@ class _bottomNavigationState extends State<bottomNavigation> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.settings, color: currentTab == 2 ? Colors.blue : Colors.grey,),
-                        Text('Setting',
-                          style: TextStyle(
-                              color: currentTab == 2 ? Colors.blue : Colors.grey),
+                        Image.asset(currentTab == 2 ? 'lib/assets/event.png' : 'lib/assets/event_menu.png',
+                        width: 29,
+                        height: 25,
+                        ),
+                        Text('My Event',
+                          style: GoogleFonts.notoSans(
+                              color: currentTab == 2 ? Color(0xFF214457) : Colors.grey,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700),
                         ),
                       ],
                     ),
@@ -127,10 +141,12 @@ class _bottomNavigationState extends State<bottomNavigation> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.person, color: currentTab == 3 ? Colors.blue : Colors.grey,),
+                        Icon(Icons.person, color: currentTab == 3 ? Color(0xFF214457) : Colors.grey,),
                         Text('Profile',
-                          style: TextStyle(
-                              color: currentTab == 3 ? Colors.blue : Colors.grey),
+                          style: GoogleFonts.notoSans(
+                              color: currentTab == 3 ? Color(0xFF214457) : Colors.grey,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w700),
                         ),
                       ],
                     ),
@@ -144,3 +160,5 @@ class _bottomNavigationState extends State<bottomNavigation> {
     );
 
   }}
+
+

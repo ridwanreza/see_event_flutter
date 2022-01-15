@@ -16,7 +16,7 @@ class _EditProfileState extends State<EditProfile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile',
+        title: Text('Edit Profile',
           style: GoogleFonts.notoSans(
             color: Colors.white,
             fontSize: 20,
@@ -98,14 +98,16 @@ class _EditProfileState extends State<EditProfile> {
                   ),
                 ),
                 Container(
+                  margin: EdgeInsets.only(top: 30),
                   width: MediaQuery.of(context).size.width * 0.80,
+                  height: 50,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)
                   ),
                   child: TextField(
                     decoration: InputDecoration(
-                      hintText: 'EMAIL',
+                      hintText: "First Name",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10),
@@ -116,9 +118,59 @@ class _EditProfileState extends State<EditProfile> {
                       ),
                       fillColor: Colors.white,
                       filled: true,
-
+                    ),
                   ),
-                ))
+                ),
+                Container(
+                    margin: EdgeInsets.only(top: 24),
+                    width: MediaQuery.of(context).size.width * 0.80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Last Name",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            bottomLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                            bottomRight: Radius.circular(10),
+                          ),
+                        ),
+                        fillColor: Colors.white,
+                        filled: true,
+
+                      ),
+                    )
+                ),
+                Container(
+                    margin: EdgeInsets.only(top: 24),
+                    width: MediaQuery.of(context).size.width * 0.80,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Email",
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(10),
+                            bottomLeft: Radius.circular(10),
+                            topRight: Radius.circular(10),
+                            bottomRight: Radius.circular(10),
+                          ),
+                        ),
+                        fillColor: Colors.white,
+                        filled: true,
+
+                      ),
+                    )
+                )
               ],
             ),
           ),

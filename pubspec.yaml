@@ -67,6 +67,7 @@ flutter:
     - lib/assets/facebookLogo.png
     - lib/assets/googleLogo.png
     - lib/assets/person.png
+    - lib/assets/event_menu.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

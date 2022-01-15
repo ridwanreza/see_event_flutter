@@ -11,11 +11,13 @@ import 'screens/contact.dart';
 import 'screens/signup.dart';
 import 'screens/login.dart';
 import 'screens/edit_profile.dart';
+import 'screens/create_event.dart';
 
 void main() => runApp(MaterialApp(
   home: Welcome(),
   routes: {
     '/welcome': (context) => Welcome(),
+    '/createEvent': (context) => CreateEvent(),
     '/editProfile': (context) => EditProfile(),
     '/contact': (context) => Contact(),
     '/signup': (context) => SignUp(),
